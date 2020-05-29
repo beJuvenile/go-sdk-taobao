@@ -14,8 +14,6 @@ import (
 	"sort"
 	"strings"
 	"time"
-
-	"github.com/nilorg/sdk/convert"
 )
 
 const (
@@ -164,7 +162,7 @@ func interfaceToString(src interface{}) string {
 	case int, int8, int32, int64:
 	case uint8, uint16, uint32, uint64:
 	case float32, float64:
-		return convert.ToString(src)
+		return ToString(src)
 	}
 	data, err := json.Marshal(src)
 	if err != nil {
