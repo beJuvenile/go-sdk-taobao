@@ -17,14 +17,16 @@ import (
 )
 
 const (
-	HTTP_GATEWAY       = "http://gw.api.taobao.com/router/rest"
-	HTTPS_GATEWAY      = "https://eco.taobao.com/router/rest"
-	HTTP_TEST_GATEWAY  = "http://gw.api.tbsandbox.com/router/rest"
-	HTTPS_TEST_GATEWAY = "https://gw.api.tbsandbox.com/router/rest"
-	MD5                = "md5"
-	HMAC               = "hmac"
-	XML                = "xml"
-	JSON               = "json"
+	HTTP_GATEWAY           = "http://gw.api.taobao.com/router/rest"
+	HTTPS_GATEWAY          = "https://eco.taobao.com/router/rest"
+	HTTP_TEST_GATEWAY      = "http://gw.api.tbsandbox.com/router/rest"
+	HTTPS_TEST_GATEWAY     = "https://gw.api.tbsandbox.com/router/rest"
+	HTTP_OVERSEAS_GATEWAY  = "http://api.taobao.com/router/rest"
+	HTTPS_OVERSEAS_GATEWAY = "https://api.taobao.com/router/rest"
+	MD5                    = "md5"
+	HMAC                   = "hmac"
+	XML                    = "xml"
+	JSON                   = "json"
 )
 
 var (

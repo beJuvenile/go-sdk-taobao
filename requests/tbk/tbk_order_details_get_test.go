@@ -11,8 +11,8 @@ import (
 
 func TestOrderDetailsGet(t *testing.T) {
 	c := opentaobao.New()
-	c.AppKey = "2526218"
-	c.AppSecret = "da2e7dd98976df40fae3899afab4bfe"
+	c.AppKey = opentaobao.AppKey
+	c.AppSecret = opentaobao.AppSecret
 	req := tbk.TbkOrderDetailsGetRequest()
 	req.SetStartTime("2020-05-27 11:00:00")
 	req.SetEndTime("2020-05-27 12:00:00")
