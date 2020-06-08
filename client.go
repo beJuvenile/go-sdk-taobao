@@ -135,11 +135,12 @@ func (c *Client) post(params Parameter) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+	defer response.Body.Close()
 
 	if response.StatusCode != 200 {
 		return nil, errors.New(fmt.Sprintf("请求错误:%d", response.StatusCode))
 	}
-	defer response.Body.Close()
+
 	return ioutil.ReadAll(response.Body)
 }
 
