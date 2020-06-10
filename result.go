@@ -1,10 +1,10 @@
 package opentaobao
 
 type ErrorResult struct {
-	ErrorResponse ErrorResponse `json:"error_response"`
+	ErrorResponse Error `json:"error_response"`
 }
 
-type ErrorResponse struct {
+type Error struct {
 	Code      int64  `json:"code"`
 	Msg       string `json:"msg"`
 	SubCode   string `json:"sub_code"`

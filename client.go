@@ -32,6 +32,7 @@ const (
 var (
 	NIL_TYPE_ERROR     = errors.New("数据类型为nil")
 	UNKONWN_TYPE_ERROR = errors.New("未知的数据类型")
+	API_RESPONSE_ERROR = errors.New("接口返回错误")
 )
 
 type Parameter map[string]interface{}

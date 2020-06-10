@@ -2,7 +2,6 @@ package tbk
 
 import (
 	"encoding/json"
-	"errors"
 
 	opentaobao "github.com/beJuvenile/go-sdk-taobao"
 )
@@ -91,12 +90,19 @@ func TbkOrderDetailsGetResult(data []byte) (TbkOrderDetailsGetData, error) {
 		return TbkOrderDetailsGetData{}, err
 	}
 	if result.RequestID == "" {
-		var errResult opentaobao.ErrorResult
-		err = json.Unmarshal(data, &errResult)
-		return TbkOrderDetailsGetData{}, errors.New(errResult.ErrorResponse.SubMsg)
+		return TbkOrderDetailsGetData{}, opentaobao.API_RESPONSE_ERROR
 	}
 
 	return result.Data, nil
+}
+
+func TbkOrderDetailGetError(data []byte) (opentaobao.Error, error) {
+	var errResult opentaobao.ErrorResult
+	err := json.Unmarshal(data, &errResult)
+	if err != nil {
+		return opentaobao.Error{}, err
+	}
+	return errResult.ErrorResponse, nil
 }
 
 func (r *TbkOrderDetailsGet) SetQueryType(value int) {
