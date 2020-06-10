@@ -1,6 +1,6 @@
 package opentaobao
 
 var (
-	AppKey    = "2526218"
-	AppSecret = "da2e7dd98976df40fae3899afab4bfe"
+	AppKey    = "2814415"
+	AppSecret = "181f90dee3bf06f1c9553f776b52dd9"
 )
