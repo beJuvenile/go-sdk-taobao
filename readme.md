@@ -1,5 +1,8 @@
 ## TaoBao SDK <sub>Glang</sub>
 
+#### Note
+此类库目前处理开发中，会有未知bug，请及时升级至最新版本
+
 #### 使用示例
 ```
 1、初始化client
