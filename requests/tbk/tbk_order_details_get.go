@@ -36,7 +36,7 @@ type TbkOrderDetailsGetOrderInfo struct {
 	FlowSource                         string `json:"flow_source"`
 	IncomeRate                         string `json:"income_rate"`
 	ItemCategoryName                   string `json:"item_category_name"`
-	ItemId                             string `json:"item_id"`
+	ItemId                             int64  `json:"item_id"`
 	ItemImg                            string `json:"item_img"`
 	ItemNum                            int    `json:"item_num"`
 	ItemTitle                          string `json:"item_title"`
