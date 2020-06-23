@@ -40,6 +40,7 @@ type TbkOrderDetailsGetOrderInfo struct {
 	ItemImg                            string `json:"item_img"`
 	ItemNum                            int    `json:"item_num"`
 	ItemTitle                          string `json:"item_title"`
+	ItemPrice                          string `json:"item_price"`
 	OrderType                          string `json:"order_type"`
 	PayPrice                           string `json:"pay_price"`
 	PubID                              int    `json:"pub_id"`
