@@ -103,6 +103,7 @@ func (c *Client) getParams() Parameter {
 func (c *Client) getSign(params Parameter) string {
 	// 获取Key
 	var keys []string
+	delete(params, "sign")
 	for k := range params {
 		keys = append(keys, k)
 	}
