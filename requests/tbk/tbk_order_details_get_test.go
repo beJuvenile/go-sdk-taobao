@@ -1,6 +1,7 @@
 package tbk_test
 
 import (
+	"encoding/json"
 	"log"
 	"testing"
 
@@ -14,9 +15,12 @@ func TestOrderDetailsGet(t *testing.T) {
 	c.AppKey = opentaobao.AppKey
 	c.AppSecret = opentaobao.AppSecret
 	req := tbk.TbkOrderDetailsGetRequest()
-	req.SetStartTime("2020-05-27 11:00:00")
-	req.SetEndTime("2020-05-27 12:00:00")
+	req.SetQueryType(1)
 	req.SetOrderScene(2)
+	req.SetJumpType(1)
+	req.SetPageNo(1)
+	req.SetStartTime("2020-07-13 11:06:00")
+	req.SetEndTime("2020-07-13 11:07:00")
 	body, err := c.Exec(req)
 	if err != nil {
 		log.Fatalln(err)
@@ -26,5 +30,6 @@ func TestOrderDetailsGet(t *testing.T) {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	log.Println(result.Results)
+	ret, _ := json.Marshal(result.Results)
+	log.Println(string(ret))
 }

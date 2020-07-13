@@ -37,6 +37,7 @@ type TbkOrderDetailsGetOrderInfo struct {
 	IncomeRate                         string `json:"income_rate"`
 	ItemCategoryName                   string `json:"item_category_name"`
 	ItemId                             int64  `json:"item_id"`
+	ItemLink                           string `json:"item_link"`
 	ItemImg                            string `json:"item_img"`
 	ItemNum                            int    `json:"item_num"`
 	ItemTitle                          string `json:"item_title"`
@@ -73,6 +74,12 @@ type TbkOrderDetailsGetOrderInfo struct {
 	TotalCommissionRate                string `json:"total_commission_rate"`
 	TradeID                            string `json:"trade_id"`
 	TradeParentID                      string `json:"trade_parent_id"`
+	ServiceFeeDtoList                  []struct {
+		ShareFee          string `json:"share_fee"`
+		SharePreFee       string `json:"share_pre_fee"`
+		ShareRelativeRate string `json:"share_relative_rate"`
+		TkShareRoleType   int    `json:"tk_share_role_type"`
+	} `json:"service_fee_dto_list"`
 }
 
 type TbkOrderDetailsGet struct {
